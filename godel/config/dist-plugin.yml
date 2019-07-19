@@ -1,7 +1,7 @@
 products:
-  check_available_memory:
+  check_memory:
     build:
-      main-pkg: 'cmd/check_available_memory'
+      main-pkg: 'cmd/check_memory'
       build-args-script: scripts/inject-name-version.sh
       os-archs:
         - os: windows
@@ -22,6 +22,26 @@ products:
   check_cpu:
     build:
       main-pkg: 'cmd/check_cpu'
+      build-args-script: scripts/inject-name-version.sh
+      os-archs:
+        - os: windows
+          arch: amd64
+        - os: windows
+          arch: "386"
+        - os: linux
+          arch: amd64
+        - os: linux
+          arch: "386"
+    dist:
+        disters:
+          type: os-arch-bin
+          config:
+            os-archs:
+              - os: windows
+                arch: amd64
+  check_file_exists:
+    build:
+      main-pkg: 'cmd/check_file_exists'
       build-args-script: scripts/inject-name-version.sh
       os-archs:
         - os: windows

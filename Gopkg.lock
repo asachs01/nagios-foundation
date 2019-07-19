@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:e3983013d82da8c49fb6776c6317d0da4b9cb926f1bb11af37f8c975889db042"
+  name = "github.com/PaesslerAG/gval"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "0ce847fc5e6163ee05ae770a441ba497fc77dcaa"
+  version = "v1.0.1"
+
+[[projects]]
   digest = "1:e92f5581902c345eb4ceffdcd4a854fb8f73cf436d47d837d1ec98ef1fe0a214"
   name = "github.com/StackExchange/wmi"
   packages = ["."]
@@ -51,9 +59,21 @@
   version = "v1.0.3"
 
 [[projects]]
-  digest = "1:c4f2aacac0b737ab10dbb1ef6ecd371b22567de2166319357153af81ff0249a5"
+  digest = "1:48702a7b31ffeb1ccce5db38ba75998906a74479ec0c7f50546a58105ba44972"
+  name = "github.com/thedevsaddam/gojsonq"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "69113724147bdb0973fc7b64d71de08e6cd476cb"
+  version = "v2.2.2"
+
+[[projects]]
+  digest = "1:b6e1a0c7832fdadb7f395c33657a39c47abb9103dd3741bd7a5048d72d9419d0"
   name = "golang.org/x/sys"
-  packages = ["windows"]
+  packages = [
+    "windows",
+    "windows/svc",
+    "windows/svc/mgr",
+  ]
   pruneopts = "UT"
   revision = "90b0e4468f9980bf79a2290394adaf7f045c5d24"
 
@@ -61,10 +81,14 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/PaesslerAG/gval",
     "github.com/StackExchange/wmi",
     "github.com/pbnjay/memory",
     "github.com/spf13/cobra",
+    "github.com/thedevsaddam/gojsonq",
     "golang.org/x/sys/windows",
+    "golang.org/x/sys/windows/svc",
+    "golang.org/x/sys/windows/svc/mgr",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
